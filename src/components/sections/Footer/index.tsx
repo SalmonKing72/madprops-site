@@ -20,6 +20,9 @@ export default function Footer(props) {
         styles = {},
         enableAnnotations
     } = props;
+
+    const year = new Date().getFullYear();
+
     return (
         <footer
             className={classNames(
@@ -38,7 +41,7 @@ export default function Footer(props) {
                             {(logo?.url || title) && (
                                 <Link href="/" className="flex flex-col items-start">
                                     {logo && (
-                                        <ImageBlock {...logo} className="inline-block w-auto" {...(enableAnnotations && { 'data-sb-field-path': 'logo' })} />
+                                        <ImageBlock {...logo} className="inline-block" {...(enableAnnotations && { 'data-sb-field-path': 'logo' })} />
                                     )}
                                     {title && (
                                         <div className="h4" {...(enableAnnotations && { 'data-sb-field-path': 'title' })}>
@@ -89,7 +92,7 @@ export default function Footer(props) {
                                 className={classNames('sb-markdown', 'text-sm', 'mb-4', { 'sm:order-first sm:mr-12': legalLinks.length > 0 })}
                                 {...(enableAnnotations && { 'data-sb-field-path': 'copyrightText' })}
                             >
-                                {copyrightText}
+                                {copyrightText + ' ' + year}
                             </Markdown>
                         )}
                     </div>
