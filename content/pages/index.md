@@ -327,9 +327,9 @@ sections:
       text: The Best of Both Worlds
       color: text-dark
       type: TitleBlock
-    subtitle: Increase your reach
-    text: >
-      Peaceful suburban sanctuary, minutes from vibrant city life
+    subtitle: Peaceful suburban sanctuary, minutes from vibrant city life
+    # text: >
+    #   Peaceful suburban sanctuary, minutes from vibrant city life
     actions:
       - label: Details Coming...
         url: /
